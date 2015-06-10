@@ -6,5 +6,6 @@ _build/
 
 *~
 
+*.bin
 *.c
 *.cpp

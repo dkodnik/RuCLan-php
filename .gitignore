@@ -1,0 +1,10 @@
+_build/
+
+# dotfiles
+.*
+!.gitignore
+
+*~
+
+*.c
+*.cpp

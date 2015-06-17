@@ -48,6 +48,7 @@ function load_tpl($filename)
 	$f_tpl = fopen($filename_full,"r+");
 	$txt_tpl=fread($f_tpl,filesize($filename_full));
 	fclose($f_tpl);
+	//echo($txt_tpl);
 	return json_decode($txt_tpl);
 }
 
@@ -70,6 +71,9 @@ else
 // базовые слова
 $base_data=load_tpl("std_c");
 $base_lex=$base_data->lex;
+
+/*var_dump($base_data);
+exit(0);*/
 
 // стандартные расширяющие модули - грузим из файлов исходников
 $ext_lex=array();
@@ -123,7 +127,7 @@ foreach ($text_ar as $kArr => $valueArr)
 	{
 
 		$findstr = $key;
-		$tostr  = $value;
+		$tostr  = $value->org;
 
 		$str=str_replace($findstr, $tostr,  $str);
 	}
@@ -132,7 +136,7 @@ foreach ($text_ar as $kArr => $valueArr)
 	{
 
 		$findstr = $key;
-		$tostr  = $value;
+		$tostr  = $value->org;
 
 		$str=str_replace($findstr, $tostr,  $str);
 	}

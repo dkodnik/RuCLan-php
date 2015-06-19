@@ -56,7 +56,7 @@ function load_tpl($filename)
 
 if(!isset($argv[1]))
 {
-	echo "RuCLan - Russian C Language v.0.0.1\n";
+	echo "RuCLan - Russian C Language v.0.0.2\n";
 	echo "php ruclan.php file_In file_Out\n";
 	exit (0);
 }
